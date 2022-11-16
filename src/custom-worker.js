@@ -63,9 +63,7 @@ registerRoute(
  * Caches at: runtime
  */
 registerRoute(
-  ({ url }) =>
-    url.origin === 'https://5fd60a9066125e0016500b6c.mockapi.io' &&
-    url.pathname.startsWith(`/users`),
+  ({ url }) => url.origin === 'https://dummyjson.com' && url.pathname.startsWith(`/products`),
   new StaleWhileRevalidate({
     cacheName: 'api-response',
     plugins: [
